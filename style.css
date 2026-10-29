@@ -1,1 +1,166 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  margin: 0;
+  background: #17152b;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 25px 12px;
+  background: #242044;
+}
+
+header h1 {
+  color: #ffcf40;
+  margin-bottom: 8px;
+}
+
+main {
+  width: min(950px, 94%);
+  margin: 25px auto;
+}
+
+section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #252143;
+  border-radius: 16px;
+}
+
+.placar {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+  text-align: center;
+}
+
+.mesa {
+  text-align: center;
+}
+
+.cartas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.carta {
+  width: 105px;
+  height: 145px;
+  border: 3px solid white;
+  border-radius: 13px;
+  color: white;
+  font-weight: bold;
+  font-size: 19px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px #0004;
+  transition: transform 0.2s;
+}
+
+.carta:hover:not(:disabled) {
+  transform: translateY(-8px) rotate(-2deg);
+}
+
+.carta:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.vermelho { background: #ef394b; }
+.azul { background: #287ce0; }
+.verde { background: #159b66; }
+.amarelo { background: #f4c842; color: #302612; }
+.coringa {
+  background: linear-gradient(135deg,
+    #ef394b 25%, #287ce0 25% 50%,
+    #159b66 50% 75%, #f4c842 75%);
+}
+
+#carta-atual .carta {
+  cursor: default;
+}
+
+#mensagem {
+  color: #ffdb72;
+  font-weight: bold;
+}
+
+.acoes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button:not(.carta) {
+  border: 0;
+  border-radius: 9px;
+  padding: 12px 16px;
+  background: #ffcf40;
+  color: #211a32;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:not(.carta):hover {
+  filter: brightness(1.1);
+}
+
+button:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 3px;
+}
+
+#alternativas {
+  display: grid;
+  gap: 10px;
+}
+
+#alternativas button {
+  text-align: left;
+  background: #3b355d;
+  color: white;
+}
+
+#alternativas button.correta {
+  background: #18764e;
+}
+
+#alternativas button.errada {
+  background: #a92e43;
+}
+
+.dica {
+  border: 1px solid #ffcf40;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  color: #bbb6d2;
+  font-size: 13px;
+}
+
+@media (max-width: 500px) {
+  .carta {
+    width: 85px;
+    height: 120px;
+    font-size: 16px;
+  }
+
+  section {
+    padding: 14px;
+  }
+
+  .placar {
+    font-size: 13px;
+  }
+}
