@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UNO Dissertativo Argumentativo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>🃏 UNO Dissertativo</h1>
+    <p>Desafie seus conhecimentos de redação para o ENEM!</p>
+  </header>
 
+  <main>
+    <section class="placar">
+      <div>Suas cartas: <strong id="qtd-jogador">7</strong></div>
+      <div>Pontos: <strong id="pontos">0</strong></div>
+      <div>RedaBot: <strong id="qtd-bot">7</strong></div>
+    </section>
+
+    <section class="mesa">
+      <h2>Carta da mesa</h2>
+      <div id="carta-atual"></div>
+      <p id="mensagem">Sua vez! Escolha uma carta válida.</p>
+    </section>
+
+    <section>
+      <h2>Suas cartas</h2>
+      <div id="minhas-cartas" class="cartas"></div>
+      <div class="acoes">
+        <button id="comprar">Comprar carta</button>
+        <button id="uno">UNO!</button>
+        <button id="reiniciar">Nova partida</button>
+      </div>
+    </section>
+
+    <section class="desafio">
+      <h2>Desafio de redação</h2>
+      <p id="pergunta">Jogue uma carta para receber uma pergunta.</p>
+      <div id="alternativas"></div>
+      <p id="explicacao"></p>
+    </section>
+
+    <section class="dica">
+      <h2>💡 Dica do ENEM</h2>
+      <p id="dica">Uma boa redação apresenta tese clara e argumentos consistentes.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto educativo independente • UNO Dissertativo Argumentativo</p>
+  </footer>
+</body>
+</html>
